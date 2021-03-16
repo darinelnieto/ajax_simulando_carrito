@@ -66,23 +66,3 @@ document.getElementById('productos').addEventListener('click', function(e){
 
 
 
-//pidiendo datos de otra pagina
-
-var agre = document.getElementById('in');
-
-if( window.XMLHttpRequest ) {
-	ajax = new XMLHttpRequest();
-} else{
-	ajax = new ActiveXOjebct ('Microsoft.XMLHTTP');
-}
-
-function agregar() {
-	if ( ajax.readyState == 4 && ajax.status == 200 ){
-		agre.innerHTML = ajax.responseText;
-	}
-}
-
-ajax.onreadystatechange = agregar;
-ajax.open( "GET", 'ini.html' );
-ajax.send();
-
